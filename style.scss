@@ -25,18 +25,6 @@ body {
   height: 809px;
   font-size: 18px;
   position: relative;
-  &::after {
-    position: absolute;
-    top: 0;
-    background-image: url(./design/mobile-design.jpg);
-    content: "";
-    width: 100%;
-    background-position: top;
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    height: 100%;
-    pointer-events: none;
-  }
 }
 
 .container {
