@@ -51,8 +51,8 @@ body {
   padding: 40px 60px;
   background: linear-gradient(
     180deg,
-    hsla(252, 100%, 67%) 0%,
-    hsla(241, 81%, 54%) 100%
+    rgba(103, 67, 255, 1) 0%,
+    rgba(50, 43, 234, 1) 100%
   );
   width: 50%;
   border-radius: 25px;
@@ -76,11 +76,7 @@ body {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  background: linear-gradient(
-    180deg,
-    hsla(256, 72%, 46%, 1) 0%,
-    hsla(241, 72%, 46%, 1) 100%
-  );
+  background: linear-gradient(180deg, #4a22c8 0%, #4533eb47 80%);
   display: flex;
   align-content: center;
   justify-content: center;
@@ -174,18 +170,91 @@ body {
   color: $Darkgrayblue;
 }
 
-.white__continue {
+/* .white__continue {
   margin-top: 25px;
   width: 100%;
   background-color: $Darkgrayblue;
+  background: linear-gradient(180deg, $Darkgrayblue 0%);
   border: none;
   outline: none;
   color: $Paleblue;
   height: 56px;
   border-radius: 30px;
   font-size: 1em;
-}
+  transition: background-color 2s ease-out;
 
+  &:hover {
+    transition: background-color 2s ease;
+    background-color: $Darkgrayblue;
+    background: linear-gradient(
+      180deg,
+      rgba(103, 67, 255, 1) 0%,
+      rgba(50, 43, 234, 1) 100%
+    );
+  }
+} */
+/* .white__continue {
+  margin-top: 25px;
+  width: 100%;
+  background-color: $Darkgrayblue;
+  background: linear-gradient(180deg, $Darkgrayblue 0%, $Darkgrayblue 100%);
+  border: none;
+  outline: none;
+  color: $Paleblue;
+  height: 56px;
+  border-radius: 30px;
+  font-size: 1em;
+  transition: background ease-out 0.9s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $Cobaltblue;
+    background: linear-gradient(180deg, #6743ff 0%, #322bea 100%);
+    color: $Paleblue;
+  }
+} */
+.white__continue {
+  margin-top: 25px;
+  width: 100%;
+  background: $Darkgrayblue;
+  border: none;
+  outline: none;
+  color: $Paleblue;
+  height: 56px;
+  border-radius: 30px;
+  font-size: 1em;
+  position: relative;
+  overflow: hidden;
+  .continue__text {
+    z-index: 1000;
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(103, 67, 255, 1) 0%,
+      rgba(50, 43, 234, 1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:hover {
+    color: $Paleblue;
+    cursor: pointer;
+  }
+}
 .item__right {
   padding-top: 4px;
 }
