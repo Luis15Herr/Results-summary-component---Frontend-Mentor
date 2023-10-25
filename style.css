@@ -16,6 +16,12 @@ body {
   position: relative;
 }
 
+.attribution {
+  position: absolute;
+  bottom: 15px;
+  font-size: 0.8em;
+}
+
 .container {
   width: 1440px;
   margin: auto;
